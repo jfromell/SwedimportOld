@@ -1,0 +1,328 @@
+body {
+  background-color: #4B7399;
+  font-family: Verdana, Helvetica, Arial;
+  font-size: 12px;
+	color: #555;
+}
+
+a img {
+  border: none;
+}
+
+a {
+  color: #555;
+	text-decoration: none;
+}
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+
+.centered {
+	margin: 0 auto;
+	text-align:center;
+}
+
+#container {
+  width: 75%;
+  margin: 0 auto;
+  background-color: #FFF;
+  padding: 20px 40px;
+  border: solid 1px black;
+  margin-top: 20px;
+}
+
+#flash_notice, #flash_error, #flash_alert {
+  padding: 5px 8px;
+  margin: 10px 0;
+}
+
+#flash_notice {
+  background-color: #CFC;
+  border: solid 1px #6C6;
+}
+
+#flash_error, #flash_alert {
+  background-color: #FCC;
+  border: solid 1px #C66;
+}
+
+.fieldWithErrors {
+  display: inline;
+}
+
+.error_messages {
+  width: 400px;
+  border: 2px solid #CF0000;
+  padding: 0px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  font-size: 12px;
+}
+
+.error_messages h2 {
+  text-align: left;
+  padding: 5px 10px;
+  font-size: 12px;
+  margin: 0;
+  background-color: #FCC;
+  border: 1px solid #C66;
+  color: #000;
+}
+
+.error_messages p {
+  margin: 8px 10px;
+}
+
+.error_messages ul {
+  margin: 0;
+}
+
+/* Admin Styles */
+
+#header {
+	background: url(../images/hdr.gif) repeat-x;
+	color: #999;
+	font-weight: bold;
+	height: 50px;
+	line-height: 50px;
+	margin-bottom: 20px;
+}
+#header h1 {
+	color: #fff;
+	float: left;
+	font-size: 18px;
+	font-weight: normal;
+	margin-right: 80px;
+	text-transform: uppercase;
+}
+#header a {
+	text-decoration: none;
+	color: #fff;
+}
+.hdrl {
+	background: url(../images/hdrl.gif) no-repeat left top;
+	height: 50px;
+	width: 20px;
+	float: left;
+}
+.hdrr {
+	background: url(../images/hdrr.gif) no-repeat right top;
+	height: 50px;
+	width: 20px;
+	float: right;
+}
+#header .user {
+	float: right;
+	font-size: 11px;
+	font-weight: normal;
+}
+
+.block {
+	background: #fff;
+	margin-bottom: 25px;
+}
+.block .block-head {
+	background: #e8e8e8;
+	height: 45px;
+	line-height: 45px;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.block .block-head h2 {
+	color: #555;
+	font-size: 16px;
+	text-shadow: 1px 1px 0 #fff;
+	text-transform: uppercase;
+	margin-left: 20px;
+}
+.block .block-content {
+	border: 1px solid #ccc;
+	padding: 20px 20px 10px;
+	
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+/* Table styling */
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+table thead tr th {
+	background-color: #404046;
+	border: 1px solid #404046;
+	color: #fff;
+	font-weight: normal;
+	padding: 0.3em 1.67em 0.1em;
+	line-height: 1.5em;
+}
+
+table td, table th {
+	text-align: left;
+}
+
+table tbody tr td {
+	border: 1px solid #e3e3e3;
+	padding: 0.3em 1.5em;
+}
+
+table body tr td.actions {
+	width: 60px;
+}
+
+table tbody tr.even {
+	background-color:#f5f5f5;
+}
+
+table tbody tr.odd {
+	background-color:#fff;
+}
+
+table td.checkbox {
+	width: 20px;
+}
+
+/* treeTable styling */
+.treeTable tr td .expander{
+	background-position: left center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	padding: 0;
+	zoom :1; /* For IE7 */
+}
+
+.treeTable tr.collapsed td .expander{
+	background-image: url(../images/toggle-expand-dark.png);
+}
+
+.treeTable tr.expanded td .expander{
+	background-image: url(../images/toggle-collapse-dark.png);
+}
+
+/* Icons and buttons */
+
+a.icon {
+	opacity: 0.4;
+	border-bottom:none;
+}
+a.icon:hover {
+	opacity: 1.0;
+	background-color:transparent;
+}
+a.icon img {
+	border: none;
+}
+
+.button, input[type=submit] {
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	line-height: 1.5em;
+	color: #000;
+	cursor: default;
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+	border: 1px solid rgba(0,0,0,0.4);
+	display: inline-block;
+	
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-box-shadow: 0px 0px 2px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0px 0px 2px rgba(0,0,0,0.5);
+	
+	background: -webkit-gradient(linear, 0%, 0%, 0%, 100%, from(rgba(255,255,255,1)), to(rgba(185,185,185,1)));
+	background: -moz-linear-gradient(top, rgba(255,255,255,1),rgba(185,185,185,1));
+	
+	padding: 4px 5px 4px 5px;
+	margin-right: 10px;
+}
+.button:hover, input[type=submit]:hover{
+	background: rgba(240,240,240,1);
+}
+.button:active, .button:focus, input[type=submit]:active, input[type=submit]:focus{
+	background: -webkit-gradient(linear, 0%, 100%, 0%, 0%, from(rgba(255,255,255,1)), to(rgba(185,185,185,1)));
+	background: -moz-linear-gradient(bottom, rgba(255,255,255,1),rgba(185,185,185,1));
+}
+.button:disabled, input[type=submit]:disabled{
+	color: rgba(0,0,0,0.4);
+	text-shadow:1px 1px 0px rgba(255,255,255,0.5);
+	background: rgba(220,220,220,1);
+}
+.form_buttons{
+	margin-top: 30px;
+}
+
+/* Styling for new, edit forms */
+#photos_wrapper{
+	margin-left: 25%;
+}
+#uploadify_form{
+	float: left;
+}
+#photos{
+	width: 325px;
+	margin-left: 10px;
+	float: left;
+}
+.photo{
+	float: left;
+	margin-left: 10px;
+	width: 125px;
+	height: 125px;
+	position: relative;
+}
+.delete_button{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+/* Styling for Uploadify */
+#status_message{
+	
+}
+#queue{
+	border: 1px solid #ccc;
+	height: 213px;
+	margin-bottom: 10px;
+	width: 370px;
+}
+.uploadifyQueueItem{
+	background-color: #FFF !important;
+	border: none !important;
+	border-bottom: 1px solid #ccc !important;
+	font: 11px Verdana, Geneva, sans-serif;
+	height: 50px;
+	margin-top: 0;
+	padding: 10px;
+	width: 350px;
+}
+.uploadifyError{
+	background-color: #FDE5DD !important;
+	border: none !important;
+	border-bottom: 1px solid #FBCBBC !important;
+}
+.uploadifyQueueItem .cancel{
+	float: right;
+}
+#queue .completed{
+	color: #C5C5C5;
+}
+.uploadifyProgress{
+	background-colod: #E5E5E5;
+	margin-top: 10px;
+	width: 100%;
+}
+.uploadifyProgressBar{
+	background-color: #0099FF;
+	height: 3px;
+	width: 1px;
+}

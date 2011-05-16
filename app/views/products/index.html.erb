@@ -1,0 +1,52 @@
+<% content_for :title, @category.name %>
+<% content_for :javascripts do %>
+	$('.img').cycle({
+		fx		: 'fade',
+		pager	:	'#pagerNav',
+		pagerAnchorBuilder: function(idx, slide){
+			return '<li><a href="#"><img src="' + slide.src + '" width="50" height="50" /></a><li>';
+		},
+		timeout: 0
+	});
+<% end %>
+<div class="sidebarContainer fl">
+	<div class="sidebarItem">
+		<div class="sidebarHeader">
+			<h3><%= @category.name %></h3>
+		</div>
+		<div class="sidebarGeneral">
+			<div class="img">
+				<% @category.photos.each do |photo| %>
+					<%= image_tag(photo.image_url(:thumb)) %>
+				<% end %>
+			</div>
+			<ul id="pagerNav"></ul>
+			<p>
+				<%= @category.description %>
+			</p>
+		</div>
+	</div>
+</div>
+<div id="pageContent">
+	<table>
+		<thead>
+			<tr>
+				<% @category.heading.split(",").each do |head| %>
+					<th><%= head %></th>
+				<% end %>
+			</tr>
+		</thead>
+
+		<tbody>
+			<% @products.each do |product| %>
+			<tr>
+				<td><%= product.name %></td>
+
+				<% product.measures.split(",").each do |measure| %>
+					<td><%= measure %></td>
+				<% end %>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>

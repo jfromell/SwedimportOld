@@ -1,0 +1,63 @@
+<% content_for :head do %>
+	<%=raw GMap.header %>
+	<%=raw @map.to_html %>
+	
+	<style>
+		#infoWindow{
+			width: 100px;
+		}
+		#infoWindow_contents{
+			background-color: #f5f7f9;
+			text-align: center;
+		}
+		#infoWIndow_red_beak{
+			width: 28px;
+			height: 38px;
+		}
+		#infoWindow_tl, #infoWindow_tr,#infoWindow_bl, #infoWindow_br,
+		#infoWindow_t, #infoWindow_l, #infoWindow_r, #infoWindow_b{
+			background-color: #e5e9ed;
+			height: 1px;
+			width: 1px;
+		}
+	</style>
+<% end %>
+<div class="sidebarContainer fl">
+	<div class="sidebarItem">
+		<div class="sidebarHeader">
+			<h3>Kontakt information</h3>
+		</div>
+		<ul class="basicList">
+		    <li>
+		    	<p>Swedimport AB</p>
+					<p>Bronäsvägen 6</p>
+					<p>711 34  Lindesberg</p>
+		    </li>
+		    <li>
+		    	<p>(+46) 0581-13500
+		    </li>
+		    <li>
+					<p>
+		    		<a href="mailto:info@swedimport.se">info@swedimport.se</a>
+					</p>
+		    </li>
+		</ul>
+	</div>
+	<div class="sidebarItem">
+		<div class="sidebarHeader">
+			<h3>Hitta hit</h3>
+		</div>
+		<div class="sidebarGeneral" id="map_container">
+			<%=raw @map.div(:width => 213, :height => 142) %>
+		</div>
+	</div>
+</div>
+
+<div id="pageContent" class="fr">
+	<p>För att kontakta oss, använd kontakt informationen till vänster eller använd formuläret nedan så skickas ett mail till oss.</p>
+	<p>Vi svarar på detta så fort som möjligt.</p>
+	
+	<div class="sepContainer"></div>
+	
+	<%= render 'form' %>
+</div>

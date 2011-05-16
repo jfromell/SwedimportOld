@@ -1,0 +1,15 @@
+<%= semantic_form_for [:admin, @category], :html => { :multipart => true } do |f| %>
+	<% f.inputs do %>
+		<%= f.input :name, :required => true, :label => "Benämning" %>
+		<%= f.input :description, :required => true, :label => "Beskrivning" %>
+		<%= f.input :heading, :required => false, :hint => "Separera varje fält med ett komma. Ex. Benänming,Utv. mått etc.", :label => "Tabell huvud" %>
+		<%= f.input :parent_id, :collection => @categories, :required => true, :label => "Tillhör", :hint => "Lämna blank ifall kategorin inte tillhör en annan kategori", :as => :select %>	
+	<% end %>
+	
+	<%= render :partial => 'photos', :locals => { :f => f } %>
+	
+	<% f.buttons do %>
+		<%= f.commit_button %>
+	<% end %>
+
+<% end %>

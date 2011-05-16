@@ -1,0 +1,11 @@
+<% @products.each do |product| %>
+	<tr>
+		<td class="checkbox"><%= check_box_tag "product_ids[]", product.id %></td>
+		<td><%= product.name %></td>
+		<td><%= product.measures %></td>
+		<td class="actions">
+			<%= link_to_icon "edit", edit_admin_category_product_path(product.category, product) %>
+			<%= link_to_icon "destroy", admin_category_product_path(product.category, product), :confirm => "This will delete the product #{product.name}. Are you sure?", :method => :delete %>
+		</td>
+	</tr>
+<% end %>

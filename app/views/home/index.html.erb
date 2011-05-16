@@ -1,0 +1,51 @@
+<% content_for :slider do %>
+	<div id="sliderContainer">
+		<div class="centerContainer">
+			<div id="sliderPrevBtn">
+				<%= image_tag('frontend/btnPrev.png', :alt => 'Previous') %>
+			</div>
+			<div id="mainSlider">
+				<ul>
+				    <li>
+				        <%= image_tag('frontend/slider/sliderImg1.png', :alt => 'IMG01', :class => 'slideImg fl') %>
+				        <h1>Kolla här!</h1>
+				        <p class="sliderParagraph">Häftiga grejer som kanske passar just dig!</p>
+								<div class="blankSeparator"></div>
+				        <%= link_to 'Klicka här', categories_path, :class => 'darkButton fl' %>
+				    </li>
+				    <li>
+				        <%= image_tag('frontend/slider/sliderImg1.png', :alt => 'IMG01', :class => 'slideImg fl') %>
+				        <h1>Kolla igen!</h1>
+				        <p class="sliderParagraph">Mer häftiga grejer som kanske passar just dig!</p>
+								<div class="blankSeparator"></div>
+				        <%= link_to 'Klicka här', categories_path, :class => 'darkButton fl' %>
+				    </li>
+				    <li>
+				        <%= image_tag('frontend/slider/sliderImg1.png', :alt => 'IMG01', :class => 'slideImg fl') %>
+				        <h1>Och en gång till</h1>
+				        <p class="sliderParagraph">Ännu mer häftiga grejer som kanske passar just dig!</p>
+								<div class="blankSeparator"></div>
+				        <%= link_to 'Klicka här', categories_path, :class => 'darkButton fl' %>
+				    </li>
+				</ul>
+			</div>
+			<div id="sliderNextBtn">
+				<%= image_tag('frontend/btnNext.png', :alt => 'Next') %>
+			</div>
+		</div>
+	</div>
+<% end %>
+
+<div id="serviceListContainer">
+	<div class="centerContainer">
+		<div class="oneThird">
+			Meeeeehp
+		</div>
+		<div class="oneThird">
+			Meeeeehp
+		</div>
+		<div class="oneThird last">
+			Meeeeehp
+		</div>
+	</div>
+</div>

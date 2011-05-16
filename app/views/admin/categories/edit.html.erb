@@ -1,0 +1,16 @@
+<% title "Edit Category" %>
+
+<%= link_to 'Visa', [:admin, @category] %> |
+<%= link_to 'Bakåt', admin_categories_path %>
+
+<div class="block">
+	<div class="block-head">
+		<h2>Editing category</h2>
+	</div>
+	<div class="block-content">
+		<%= render 'form' %>
+	</div>
+</div>
+
+
+

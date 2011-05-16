@@ -1,0 +1,52 @@
+<% key = Rails.application.config.session_options[:key] %>
+<% content_for :javascript do %>
+	<script type="text/javascript">
+		var upload_params = {
+			'<%= key %>' : '<%= cookies[key] %>',
+			'<%= request_forgery_protection_token %>' : '<%= form_authenticity_token %>',
+			"_http_accept" : "application/javascript"
+		};
+		
+		var url = $('input#photo_image').attr('rel');
+		$('input#photo_image').uploadify({
+			'buttonText'		: 'Ladda upp bild(er)',
+			'uploader'			: '/assets/uploadify.swf',
+			'script'				: url,
+			'fileDataName'	: 'photo[image]',
+			'fileExt'				: '*.png;*.jpg;*.jpeg;*.gif;*.bmp',
+			'cancelImg'			: '/images/cancel.png',
+			'multi'					: true,
+			'scriptData'		: upload_params,
+			'auto'					: true,
+			'queueID'				: 'queue',
+			'queueSizeLmit'	: 3,
+			'simUploadLimit': 3,
+			'removeCompleted': false,
+			'onSelectOnce'	: function(event, data){
+				$('#status_message').text(data.filesSelected + ' filer har lagts till i kön');
+			},
+			'onAllComplete'	: function(event, data){
+				$('#status_message').text(data.filesUploaded + ' filer laddades upp, ' + data.errors + ' fel.');
+			},
+			'onComplete'		: function(event, ID, fileObj, response, data){
+				$('#photos').append(response);
+			}
+		});
+	</script>
+<% end %>
+
+<div id="photos_wrapper">
+	<div id="uploadify_form">
+		<div id="status_message"></div>
+		<div id="queue" class="uploadifyQueue"></div>
+		<% unless @category.new_record? %>
+			<%= fields_for Photo.new do |f| %>
+				<%= f.file_field :image, :rel => admin_category_photos_path(@category) %>
+			<% end %>
+		<% end %>
+	</div>
+	<div id="photos">
+		<%= render :partial => '/admin/photos/photo', :collection => @category.photos %>
+	</div>
+	<div class="clear"></div>
+</div>

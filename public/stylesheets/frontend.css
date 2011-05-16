@@ -1,0 +1,480 @@
+/************************ GENERAL STYLES ************************/
+body{
+	font-family: Arial, Tahoma, sans-serif;
+	font-size: 12px;
+	color: #444549;
+}
+
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+
+.cl{
+	clear: left;
+}
+.cr{
+	clear: right;
+}
+.cb{
+	clear: both;
+}
+
+h1,h2,h3,h4{
+	font-weight: normal;
+}
+
+h1{
+	font-size: 24px;
+}
+h3{
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+a{
+	text-decoration: none;
+	color: #367ABA;
+}
+
+em{
+	font-size: 11px;
+	font-style: italic;
+	color: #919295;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+.noBottomBorder{
+	border-bottom: none;
+	overflow: hidden;
+}
+.noRightBorder{
+	border-right: none !important;
+}
+
+p{
+	line-height: 1.5em;
+	margin: 15px 0;
+}
+
+div.blankSeparator{
+	height: 1px;
+	margin-bottom: 30px;
+	display: block;
+}
+div.sepContainer{
+	background: url(../images/frontend/separatorBG.png);
+	height: 20px;
+	display: block;
+	margin: 30px 0;
+}
+
+div.last{
+	margin-right: 0 !important;
+}
+
+/************************ STRUCTURE STYLES ************************/
+div.centerContainer{
+	width: 960px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+div#contentWrapper{
+	min-height: 400px;
+}
+div#leftContainer{
+	width: 360px;
+	margin-right: 50px;
+}
+div#rightContainer{
+	width: 550px;
+}
+
+/************************ TOP PART STYLES ************************/
+div#topContainer{
+	height: 131px;
+}
+.logo{
+	margin-top: 40px;
+}
+div#contactInformationTop{
+	background: url(../images/frontend/topPaperShadow.png) top center no-repeat;
+	width: 291px;
+	height: 118px;
+}
+	div#contactInformationTop ul{
+		padding: 0 30px;
+	}
+		div#contactInformationTop ul li{
+			border-bottom: 1px solid #EBEBED;
+		}
+		div#contactInformationTop ul li span{
+			color: #444549;
+		}
+		div#contactInformationTop ul li p{
+			font-size: 11px;
+			color: 92979D;
+			background: url(../images/frontend/bulletPoint.png) left center no-repeat;
+			padding-left: 15px;
+			margin: 8px 0;
+		}
+
+/************************ MENU PART STYLES ************************/
+div#menuContainer{
+	background: url(../images/frontend/menuBG.png) 0 0 repeat-x;
+	height: 60px;
+}
+ul#nav{
+}
+	ul#nav li{
+		float: left;
+		display: inline;
+		margin: 23px 30px 0 0;
+		background: url(../images/frontend/menuSep.png) center right no-repeat;
+	}
+	ul#nav li a{
+		color: white;
+		font-size: 14px;
+		padding-right: 30px;
+		text-transform: uppercase
+	}
+	ul#nav li a:hover{
+		color: #92979D;
+	}
+		ul#nav li a span{
+			font-size: 12px;
+			text-transform: lowercase;
+			color: #606168;
+			display: block;
+			padding-right: 30px;
+	}
+div#breadcrumbsContainer{
+	background: url(../images/frontend/breadcrumbsBG.png) 0 0 repeat-x;
+	height: 60px;
+}
+	div#breadcrumbsContainer p{
+		color: #92979D;
+		font-size: 11px;
+		height: 60px;
+		line-height: 60px;
+		margin: 0;
+	}
+
+/************************ SLIDER STYLES ************************/
+div#sliderContainer{
+	background: url(../images/frontend/sliderBG.png) repeat-x;
+	height: 300px;
+	position: relative;
+}
+#mainSlider{
+	float: left;
+	width: 840px;
+}
+	#mainSlider ul li{
+		height: 260px;
+		overflow: hidden;
+		padding: 40px 60px 0;
+		width: 720px;
+	}
+		#mainSlider ul li h1{
+			color: #367ABA;
+			text-transform: uppercase;
+		}
+.sliderParagraph{
+	color: #444549;
+	font-size: 14px;
+}
+.slideImg{
+	margin-right: 30px;
+}
+#sliderPrevBtn, #sliderNextBtn{
+	float: left;
+	width: 60px;
+}
+	#sliderPrevBtn img, #sliderNextBtn img{
+		cursor: pointer;
+		margin-top: 120px;
+	}
+a.darkButton{
+	background: url(../images/frontend/darkButtonOut.png) repeat-x;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	color: white;
+	cursor: pointer;
+	font-size: 14px;
+	padding: 10px 20px;
+	text-transform: uppercase;
+}
+a.darkButton:hover{
+	background: url(../images/frontend/darkButtonOver.png) repeat-x;
+	text-decoration: none;
+}
+a.darkButton img{
+	margin-bottom: -1px;
+	margin-left: 10px;
+}
+
+/************************ FOOTER STYLES ************************/
+div#footerContainer{
+	background: #2E2F33;
+}
+	div#footerContainer h3, div#footerContainer p, div#footerContainer a{
+		color: #E1E5E9;		
+	}
+ul#contactInfoList li{
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	border-radius: 5px;
+	
+	background: #424347;
+	color: #E1E5E9;
+	padding: 15px;
+	font-size: 11px;
+	margin-bottom: 3px;
+}
+div.oneThird{
+	width: 285px;
+	margin-right: 50px;
+	float: left;
+}
+
+div#footerCopyrightContainer{
+	background: #242528;
+	padding: 20px 0;
+}
+	div#footerCopyrightContainer ul{
+		margin-top: 15px;
+	}
+	div#footerCopyrightContainer ul li{
+		display: inline;
+		padding-right: 5px;
+	}
+
+/************************ PRODUCT PAGE STYLES ************************/
+div.sidebarContainer{
+	width: 223px;
+	margin-right: 50px;
+}
+div.sidebarItem{
+	-webkit-border-radius:5px;
+	-khtml-border-radius:5px;
+	border-radius:5px;
+	
+	border: 1px solid #E1E5E9;
+	margin-bottom: 30px;
+}
+	ul.arrowList{
+		background: url(../images/frontend/sidebarGradBG.png) 0 0 repeat-x;
+	}
+	ul.arrowlist li{
+		border-bottom: 1px solid #E1E5E9;
+		padding: 14px 20px;
+		background: url(../images/frontend/sidebarPointRed.png) 92% center no-repeat;
+	}
+	li.activeSidebarItem{
+		background: url(../images/frontend/sidebarPointDark.png) 92% center no-repeat !important;
+		font-weight: bold;
+		color: #62656B;
+	}
+div.sidebarHeader{
+	background: url(../images/frontend/sidebarHeaderBG.png) 0 0 repeat-x;
+	height: 47px;
+	padding: 0 20px;
+}
+	div.sidebarHeader h3{
+		height: 47px;
+		line-height: 47px;
+	}
+div#pageContent{
+	width: 685px;
+}
+
+div.categoryBox{
+	width: 22%;
+	margin-right: 1%;
+	height: 170px;
+	
+	text-align: center;
+	margin-bottom: 20px;
+}
+	div.categoryBox .img {
+		height: 125px;
+		padding-bottom: 10px;
+	}
+	div.categoryBox .description{
+		height: 25px;
+		padding-top: 10px;
+		border: 1px solid #E1E5E9;
+	}
+
+.sidebarGeneral .img img{
+	border: 1px solid #CCC;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+#pagerNav{
+	width: 183px;
+	margin-top: 5px;
+}
+	#pagerNav li{
+		width: 51px;
+		margin-right: 10px;
+		float: left;
+	}
+	#pagerNav li a{
+		width: 51px;
+		padding: 3px;
+		display: block;
+		border: 1px solid #ccc;
+	}
+	#pagerNav li a:focus{
+		outline: none;
+	}
+/************************ PRODUCT TABLE STYLES ************************/
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+table thead tr th {
+	background-color: #404046;
+	border: 1px solid #404046;
+	color: #fff;
+	font-weight: normal;
+	padding: 0.3em 1.67em 0.1em;
+	line-height: 1.5em;
+}
+
+table td, table th {
+	text-align: left;
+}
+
+table tbody tr td {
+	border: 1px solid #e3e3e3;
+	padding: 0.3em 1.5em;
+}
+
+table body tr td.actions {
+	width: 60px;
+}
+
+table tbody tr.even {
+	background-color:#f5f5f5;
+}
+
+table tbody tr.odd {
+	background-color:#fff;
+}
+
+table td.checkbox {
+	width: 20px;
+}
+
+/************************ CONTACT PAGE STYLES ************************/
+ul.basicList li{
+	border-bottom: 1px solid #E1E5E9;
+	padding: 0 20px;
+}
+	ul.basicList li p{
+		color: #919295;
+	}
+div.sidebarGeneral{
+	margin: 20px;
+}
+form#contactForm{
+	overflow: hidden;
+}
+form#contactForm p{
+	margin-top: 0;
+}
+form#contactForm input[type="text"]{
+	background: url(../images/frontend/lightInputBG.png) 0 0 repeat-x;
+	height: 30px;
+	
+	-webkit-border-radius:5px;
+	-khtml-border-radius:5px;
+	border-radius:5px;
+	
+	border: 1px solid #E1E5E9;
+	width: 260px;
+	padding: 0 10px;
+}
+	form#contactForm input[type="text"]:hover{
+		border: 1px solid #B8BABD;
+	}
+form#contactForm textarea{
+	background: url(../images/frontend/lightTextareaBG.png) 0 0 repeat-x;
+	height: 179px;
+	width: 601px;
+	
+	-webkit-border-radius:5px;
+	-khtml-border-radius:5px;
+	border-radius:5px;
+	
+	border: 1px solid #E1E5E9;
+	padding: 10px 10px 0 10px;
+	font-family: Arial, Tahoma, sans-serif;
+}
+	form#contactForm textarea:hover{
+		border: 1px solid #B8BABD;
+	}
+form#contactForm label{
+	text-transform: uppercase;
+	display: block;
+	margin-bottom: 10px;
+}
+form#contactForm p.additionalOptions a{
+	color: #367ABA;
+	line-height: 41px;
+	height: 41px;
+}
+p.oneHalf{
+	width: 47%;
+	margin-right: 3%;
+	float: left;
+}
+div#map_container{
+	margin: 5px !important;
+}
+
+/************************ ABOUT STYLES ************************/
+
+div.tabbed ul li{
+	float:left;
+	list-style: none;
+}
+div.tabbed ul li a{
+	background: #e5e9ed;
+	border: 1px solid #E1E5E9;
+	padding: 6px 10px;
+	margin: 1px 1px 0px 0px;
+	display: block;
+}
+div.tabbed ul li a.selected{
+	background: #f5f7f8;
+	border-bottom: 1px solid #f5f7f8;
+}
+div.tab_content{
+	background: #f5f7f8;
+	border: 1px solid #E1E5E9;
+	clear: left;
+	padding: 10px;
+}
+
+/************************ IE FIXES STYLES ************************/
+.ie7 ul#nav li a:hover{
+	text-decoration: none;
+}
+.ie7 form#contactForm input[type="text"], .ie7 form#subscribeForm input[type="text"]{
+	padding-top: 15px;
+	height: 32px;
+}
+.ie7 form#contactForm textarea{
+	padding-top: 15px;
+	height: 174px;
+}

@@ -1,0 +1,25 @@
+<% content_for :title, 'Produkter' %>
+<div class="sidebarContainer fl">
+	<div class="sidebarItem">
+		<div class="sidebarHeader">
+			<h3>Produkter</h3>
+		</div>
+		<ul class="arrowlist">
+			<li class="activeSidebarItem">Alla produkter</li>
+			<% @children.each do |child| %>
+				<li><%= link_to child.name, child %>
+			<% end %>
+		</ul>
+	</div>
+</div>
+<div id="pageContent" class="fr">
+	<% if @children.empty? %>
+
+		<p>Inga kategorier är skapade</p>
+
+	<% else %>
+
+		<%= render :partial => 'category', :object => @children %>
+
+	<% end %>
+</div>

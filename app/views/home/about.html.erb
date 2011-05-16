@@ -1,0 +1,42 @@
+<% content_for :title, 'Om Swedimport' %>
+
+<div class="sidebarContainer fl">
+	<div class="sidebarItem">
+		<div class="sidebarHeader">
+			<h3>Länkar</h3>
+		</div>
+		<ul class="arrowlist">
+			<li><a href="http://skiffy.com/docs/menufr.cfm?taal=se&ID=xyxz5634753A7&pagina=start.cfm">Skiffy</a></li>
+			<li><a href="#">Nånting annat</a></li>
+			<li><a href="#">Nånting annat</a></li>
+		</ul>
+	</div>
+</div>
+
+<div id="pageContent" class="tabbed fr">
+	<ul>
+	    <li><a href="#swedimport">Swedimport</a></li>
+	    <li><a href="#certifikat">Certifikat</a></li>
+	    <li><a href="#material">Material</a></li>
+	</ul>
+	
+	<div id="swedimport" class="tab_content">
+		<p>
+			Swedimport har i 35 års tid arbetat med plastdetaljer för industrin. Därför har vi ett av Sveriges ledande sortiment på över 5.000 produkter. Detta tillsammans med vår kunskap leder till att vi löser de flesta av våra kunders önskemål och problem. Service är vår styrka och därför kan ni räkna med att få de produkter ni behöver.
+		</p>
+		<p>
+			Swedimport finns i Lindesberg, 40 km norr om Örebro. Örebro är en terminalort vilket borgar för säkra leveranser. 
+			Våra kunder finns utspridda över hela landet men vi levererar även till våra nordiska grannländer.
+		</p>
+	</div>
+	<div id="certifikat" class="tab_content">
+		<%= image_tag 'certifikat/iso-14009.png' %>
+	</div>
+	<div id="material" class="tab_content">
+		Material tab
+	</div>
+</div>
+
+<script type="text/javascript">
+	$('div.tabbed ul').idTabs();
+</script>
