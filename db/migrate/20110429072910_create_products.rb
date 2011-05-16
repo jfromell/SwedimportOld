@@ -3,7 +3,7 @@ class CreateProducts < ActiveRecord::Migration
     create_table :products do |t|
       t.string :name
       t.string :measures
-      t.string :category_id
+      t.integer :category_id
 
       t.timestamps
     end

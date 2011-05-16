@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110511135813) do
+ActiveRecord::Schema.define(:version => 20110516095632) do
 
   create_table "admin_admins", :force => true do |t|
     t.string   "email",                               :default => "", :null => false
@@ -56,7 +56,7 @@ ActiveRecord::Schema.define(:version => 20110511135813) do
   create_table "products", :force => true do |t|
     t.string   "name"
     t.string   "measures"
-    t.string   "category_id"
+    t.integer  "category_id", :limit => 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
