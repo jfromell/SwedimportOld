@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110516095632) do
+ActiveRecord::Schema.define(:version => 20110518100112) do
 
   create_table "admin_admins", :force => true do |t|
     t.string   "email",                               :default => "", :null => false
@@ -27,8 +27,10 @@ ActiveRecord::Schema.define(:version => 20110516095632) do
     t.datetime "locked_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "authentication_token"
   end
 
+  add_index "admin_admins", ["authentication_token"], :name => "index_admin_admins_on_authentication_token", :unique => true
   add_index "admin_admins", ["email"], :name => "index_admin_admins_on_email", :unique => true
   add_index "admin_admins", ["reset_password_token"], :name => "index_admin_admins_on_reset_password_token", :unique => true
   add_index "admin_admins", ["unlock_token"], :name => "index_admin_admins_on_unlock_token", :unique => true

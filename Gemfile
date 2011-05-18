@@ -31,3 +31,6 @@ gem 'jquery-rails'
 # Breadcrumbs
 gem 'crumble', :require => 'breadcrumb'
 
+# Debugger
+gem 'ruby-debug'
+

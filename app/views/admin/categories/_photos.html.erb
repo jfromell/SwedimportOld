@@ -22,11 +22,15 @@
 			'queueSizeLmit'	: 3,
 			'simUploadLimit': 3,
 			'removeCompleted': false,
-			'onSelectOnce'	: function(event, data){
-				$('#status_message').text(data.filesSelected + ' filer har lagts till i kön');
-			},
-			'onAllComplete'	: function(event, data){
-				$('#status_message').text(data.filesUploaded + ' filer laddades upp, ' + data.errors + ' fel.');
+			'onError'				: function(a, b, c, d){
+				if(d.status == 404)
+					alert('Could not find upload script.');
+				else if(d.type == 'HTTP')
+					alert(d.type+' : '+d.status+' : '+d.info);
+				else if(d.type = 'File Size')
+					alert(c.name+' '+d.type+' Limit: '+Math.round(d.sizeLimit/1024)+'KB');
+				else
+					alert(d.type+' : '+d.text);
 			},
 			'onComplete'		: function(event, ID, fileObj, response, data){
 				$('#photos').append(response);

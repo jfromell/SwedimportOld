@@ -1,5 +1,4 @@
 class Admin::PhotosController < Admin::BaseController
-  before_filter :authenticate_admin!
   before_filter :find_category
   before_filter :find_or_build_photo
   
