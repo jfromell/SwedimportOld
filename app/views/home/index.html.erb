@@ -39,14 +39,47 @@
 
 <div id="serviceListContainer">
 	<div class="centerContainer">
-		<div class="oneThird">
-			Meeeeehp
+		<% @featured.each do |feature| %>
+			<div class="oneThird">
+				<% unless feature.photos.first.nil? %>
+					<%= image_tag(feature.photos.first.image_url(:thumb), :class => "fl") %>
+				<% end %>
+				<h3 class="sectionTitle">
+						<% if feature.has_children? %>
+							<%= link_to feature.name, feature %>
+						<% else %>
+							<%= link_to feature.name, category_products_path(feature) %>
+						<% end %>
+				</h3>
+				<p><%= feature.description %></p>
+			</div>
+		<% end %>
+	</div>
+</div>
+<div class="centerContainer">
+	<div class="sepContainer"></div>
+</div>
+<div class="centerContainer">
+	<div id="leftContainer" class="fl">
+			<h3 class="sectionTitle">Senaste <span>nytt</span></h3>
+			<ul id="newsList">
+				<% @news.each do |item| %>
+			    <li>
+						<span><%= item.created_at.localtime.to_s(:short) %></span>
+			    	<h3><%= item.title %></h3>
+						<p><%= item.content %></p>
+			    </li>
+				<% end %>
+			</ul>
 		</div>
-		<div class="oneThird">
-			Meeeeehp
-		</div>
-		<div class="oneThird last">
-			Meeeeehp
-		</div>
+	<div id="rightContainer" class="fr">
+		<h3 class="sectionTitle">Om <span>Swedimport</span></h3>
+		<p>
+			Swedimport har i 35 års tid arbetat med plastdetaljer för industrin. Därför har vi ett av Sveriges ledande sortiment på över 5.000 produkter. Detta tillsammans med vår kunskap leder till att vi löser de flesta av våra kunders önskemål och problem.
+		</p>
+		<blockquote><p>Service är vår styrka och därför kan ni räkna med att få de produkter ni behöver.</p></blockquote>
+		<p>
+			Swedimport finns i Lindesberg, 40 km norr om Örebro. Örebro är en terminalort vilket borgar för säkra leveranser. Våra kunder finns utspridda över hela landet men vi levererar även till våra nordiska grannländer. 
+		</p>
 	</div>
 </div>

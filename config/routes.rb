@@ -11,11 +11,17 @@ Swedimport2::Application.routes.draw do
       end
       
       resources :products do
-        post :destroy_multiple, :on => :collection
+        collection do
+          post :destroy_multiple
+          get :edit_multiple
+          put :update_multiple
+        end
       end
       
       resources :photos, :only => [:create, :destroy]
     end
+    
+    resources :news
   end
   
   resources :categories do
@@ -27,6 +33,7 @@ Swedimport2::Application.routes.draw do
   match 'about' => 'home#about', :as => :about
   match 'contact' => 'contacts#new', :as => :contact
   match 'index' => 'home#index', :as => :index
+  match 'search' => 'home#search', :as => :search
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

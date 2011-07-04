@@ -1,18 +1,21 @@
 class Admin::ProductsController < Admin::BaseController
   
   def index
-    t@products = category.products.all
+    @products = category.products.all(:order => 'name')
   end
   
   def new
-    @product = category.products.new(params[:category_id])
+    @products = [Product.new]
+    @category = category
   end
   
   def create
-    @product = category.products.new(params[:product])
-    if @product.save
-      redirect_to(admin_category_products_path(category), :notice => "Produkten skapades.")
+    @products = params[:products].values.collect { |product| category.products.new(product) }
+    if @products.all?(&:valid?)
+      @products.each(&:save!)
+      redirect_to(admin_category_products_path(category), :notice => "Produkterna skapades.")
     else
+      @products.each(&:valid?)
       render 'new'
     end
   end
@@ -32,6 +35,19 @@ class Admin::ProductsController < Admin::BaseController
     end
   end
   
+  def edit_multiple
+    @products = category.products.find(params[:product_ids])
+  end
+  
+  def update_multiple
+    @products = category.products.update(params[:products].keys, params[:products].values).reject { |p| p.errors.empty?  }
+    if @products.empty?
+      redirect_to(admin_category_products_path(category), :notice => "Produkterna uppdaterades.")
+    else
+      render 'edit_multiple'
+    end
+  end
+  
   def destroy
     @product = category.products.find(params[:id])
     
@@ -45,7 +61,7 @@ class Admin::ProductsController < Admin::BaseController
   def destroy_multiple
     @products = category.products.find(params[:product_ids])
     
-    @product.each do |product|
+    @products.each do |product|
       product.destroy
     end
     redirect_to(admin_category_products_path(category), :notice => "Produkterna togs bort.")

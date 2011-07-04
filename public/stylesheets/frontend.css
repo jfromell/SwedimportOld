@@ -62,6 +62,16 @@ p{
 	margin: 15px 0;
 }
 
+blockquote{
+	background: url(../images/frontend/quote.png) no-repeat left top;
+	margin-left: 20px;
+}
+blockquote p{
+	color: #919295;
+	font-size: 14px;
+	font-style: italic;
+	margin-left: 60px;
+}
 div.blankSeparator{
 	height: 1px;
 	margin-bottom: 30px;
@@ -69,7 +79,7 @@ div.blankSeparator{
 }
 div.sepContainer{
 	background: url(../images/frontend/separatorBG.png);
-	height: 20px;
+	height: 15px;
 	display: block;
 	margin: 30px 0;
 }
@@ -255,6 +265,43 @@ div#footerCopyrightContainer{
 		padding-right: 5px;
 	}
 
+/************************* FRONT PAGE STYLES *************************/
+div#serviceListContainer h3{
+	color: #2d2f33;
+	margin-top: 12px;
+}
+div#serviceListContainer img{
+	margin-right: 10px;
+}
+h3.sectionTitle{
+	color: #2d2f33;
+	margin: 7px 0 30px;
+}
+	h3.sectionTitle span{
+		background-color: #367ABA;
+		border-radius: 5px;
+		color: white;
+		padding: 7px 10px;
+	}
+	h3.sectionTitle span a{
+		color: white;
+	}
+ul#newsList{
+	
+}
+ul#newsList li{
+	border-bottom: 1px solid #e1e5e9;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+}
+	ul#newsList li span{
+		color: #92979D;
+		font-size: 11px;
+	}
+	ul#newsList li h3{
+		text-transform: capitalize;
+		color: #367ABA;
+	}
 /************************ PRODUCT PAGE STYLES ************************/
 div.sidebarContainer{
 	width: 223px;
@@ -305,7 +352,13 @@ div.categoryBox{
 	div.categoryBox .img {
 		height: 125px;
 		padding-bottom: 10px;
+		position:relative;
 	}
+		div.categoryBox .img a{
+			position:absolute;
+			bottom:0;
+			left:12px;
+		}
 	div.categoryBox .description{
 		height: 25px;
 		padding-top: 10px;
@@ -363,12 +416,15 @@ table body tr td.actions {
 	width: 60px;
 }
 
-table tbody tr.even {
+table tbody tr.odd {
 	background-color:#f5f5f5;
 }
 
-table tbody tr.odd {
+table tbody tr.even {
 	background-color:#fff;
+}
+table tbody tr:hover{
+	background-color:#f9f5ca;
 }
 
 table td.checkbox {
@@ -465,6 +521,10 @@ div.tab_content{
 	clear: left;
 	padding: 10px;
 }
+
+/************************ SEARCH STYLES ************************/
+
+
 
 /************************ IE FIXES STYLES ************************/
 .ie7 ul#nav li a:hover{

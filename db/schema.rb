@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110516095632) do
+ActiveRecord::Schema.define(:version => 20110701062500) do
 
   create_table "admin_admins", :force => true do |t|
     t.string   "email",                               :default => "", :null => false
@@ -46,6 +46,13 @@ ActiveRecord::Schema.define(:version => 20110516095632) do
 
   add_index "categories", ["ancestry"], :name => "index_categories_on_ancestry"
 
+  create_table "news", :force => true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "photos", :force => true do |t|
     t.integer  "category_id"
     t.string   "image"
@@ -56,7 +63,7 @@ ActiveRecord::Schema.define(:version => 20110516095632) do
   create_table "products", :force => true do |t|
     t.string   "name"
     t.string   "measures"
-    t.integer  "category_id", :limit => 255
+    t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

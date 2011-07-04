@@ -44,7 +44,7 @@
 			</div>
 			<div id="breadcrumbsContainer">
 				<div class="centerContainer">
-					<p>
+					<p class="fl">
 						<% if @breadcrumbs %>
 							Du är här:
 								<% @breadcrumbs[0..-2].each do |txt, path| %>
@@ -53,6 +53,12 @@
 								<%=h (@breadcrumbs.last.first) %>
 						<% end%>
 					</p>
+						<% form_tag search_path, :method => :get do %>
+							<p class="fr">
+								<%= text_field_tag :search, params[:search] %>
+								<%= submit_tag "Sök", :name => nil %>
+							</p>
+						<% end %>
 				</div>
 			</div>
 			

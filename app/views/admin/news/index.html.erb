@@ -1,0 +1,7 @@
+<% @news.each	do |item| %>
+	<div class="news_item">
+		<h2><%= item.title %></h2>
+		<h3><%= item.created_at %></h3>
+		<p><%= item.content %></p>
+	</div>
+<% end %>

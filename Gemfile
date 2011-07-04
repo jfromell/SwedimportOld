@@ -2,11 +2,9 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.6'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
 # Database com
-gem 'sqlite3'
+# gem 'sqlite3'
+gem 'ruby-pg'
 
 # User authentication
 gem 'devise'
@@ -31,6 +29,12 @@ gem 'jquery-rails'
 # Breadcrumbs
 gem 'crumble', :require => 'breadcrumb'
 
+# Sphinx full-text search
+gem 'thinking-sphinx'
+
 # Debugger
 gem 'ruby-debug'
+
+# Exporting/Restoring database
+gem 'yaml_db'
 

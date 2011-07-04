@@ -14,6 +14,10 @@ $(document).ready(function(){
 	});
 	
 	centerSideBarImage();
+	
+	$("#serviceListContainer .centerContainer .oneThird").last().addClass('last');
+	
+	$("table tbody tr:odd").addClass('odd');
 });
 
 function centerSideBarImage(){

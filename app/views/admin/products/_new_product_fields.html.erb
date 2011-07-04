@@ -1,0 +1,7 @@
+<% offer_remove ||=false %>
+<div class="new_fields">
+	<% f.inputs "Ny produkt#{' - ' + remove_record_link('Ta bort denna produkt') if offer_remove}" do %>
+		<%= f.input :name, :required => true, :label => "Benämning" %>
+		<%= f.input :measures, :required => true, :label => "Mått" %>
+	<% end %>
+</div>

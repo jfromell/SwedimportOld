@@ -17,4 +17,16 @@ class Category < ActiveRecord::Base
     self.names_depth_cache = path.map(&:name).join('/')
   end
   
+  define_index do
+    
+    # fields
+    indexes :name, :sortable => true
+    indexes description
+    indexes products.name, :as => :products_name
+    indexes names_depth_cache, :as => :associated
+    
+    set_property :enable_star => 1
+    set_property :min_infix_len => 1
+  end
+  
 end

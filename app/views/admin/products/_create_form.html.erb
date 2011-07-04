@@ -1,0 +1,14 @@
+<% form_tag admin_category_products_path do %>
+	<% @products.each_with_index do |product, index| %>
+		<% semantic_fields_for "products[#{index}]", product do |f| %>
+			<%= render :partial => 'new_product_fields', :locals => { :f => f, :offer_remove => false } %>
+		<% end %>
+	<% end %>
+	
+	<p><%= add_record_link "Lägg till fler", "Product" %></p>
+	
+	<%= submit_tag "Spara produkt(er)" %> eller <%= link_to "Avbryt", :back %>
+	
+<% end %>
+
+<%= new_fields_template("Product", :partial => "new_product_fields") %>

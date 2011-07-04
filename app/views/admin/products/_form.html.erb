@@ -1,12 +1,9 @@
-<% semantic_form_for [:admin, @product.category, @product] do |f| %>
-	
-	<% f.inputs :name => "Produkt" do %>
-		<%= f.input :name, :required => true %>
-		<%= f.input :measures, :required => false %>
+<%= semantic_form_for [:admin, @product.category, @product] do |f| %>
+	<% f.inputs do %>
+		<%= f.input :name, :label => 'Benämning' %>
+		<%= f.input :measures, :label => 'Mått' %>
 	<% end %>
-	
 	<% f.buttons do %>
 		<%= f.commit_button %>
-	<% end%>
-	
+	<% end %>
 <% end %>
