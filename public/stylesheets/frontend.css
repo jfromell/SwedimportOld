@@ -521,6 +521,13 @@ div.tab_content{
 	clear: left;
 	padding: 10px;
 }
+	div.tab_content .half{
+		width:47%;
+		margin-right:3%;
+	}
+	div.tab_content .last{
+		margin-right:0;
+	}
 
 /************************ SEARCH STYLES ************************/
 ul#search_results{

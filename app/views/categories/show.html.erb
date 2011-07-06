@@ -5,9 +5,14 @@
 			<h3>Produkter</h3>
 		</div>
 		<ul class="arrowlist">
-			<li class="activeSidebarItem">Alla produkter</li>
+			<li><%= link_to "Alla produkter", categories_path %></li>
+			<li class="activeSidebarItem"><%= @category.name %></li>
 			<% @children.each do |child| %>
-				<li><%= link_to child.name, child %>
+				<% if child.has_children? %>
+					<li><%= link_to child.name, child %></li>
+				<% else %>
+					<li><%= link_to child.name, category_products_path(child) %></li>
+				<% end %>
 			<% end %>
 		</ul>
 	</div>

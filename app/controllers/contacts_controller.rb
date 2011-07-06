@@ -4,7 +4,7 @@ class ContactsController < ApplicationController
     @contact = Contact.new(:id => 1)
     add_breadcrumb 'Kontakta oss', contact_path
   end
-  
+   
   def create
     @contact = Contact.new(params[:contact])
     if @contact.save
