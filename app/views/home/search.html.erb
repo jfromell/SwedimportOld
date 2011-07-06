@@ -1,9 +1,20 @@
-<% @products.each do |product| %>
-	<div class="search_result">
-		<% unless product.photos.first.nil? %>
-			<%= image_tag(product.photos.first.image_url(:thumb), :class => 'fr') %>
-		<% end %>
-		<h2><%= product.name %></h2>
-		<p><%= product.description %></p>
-	</div>
-<% end %>
+<ul id="search_results">	
+	<% @products.each do |product| %>
+		<li class="search_result">
+			<% unless product.photos.first.nil? %>
+				<div class="search_res_img fl">
+					<%= image_tag(product.photos.first.image_url(:small)) %>
+				</div>
+			<% end %>
+			<div class="search_res_text fl">
+				<% if product.has_children? %>
+					<%= link_to product.name, product %>
+				<% else%>
+					<%= link_to product.name, category_products_path(product) %>
+				<% end %>
+				<p><%= product.description %></p>
+			</div>
+			<div class="cb"></div>
+		</li>
+	<% end %>
+</ul>

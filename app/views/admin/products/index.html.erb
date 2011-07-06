@@ -1,8 +1,12 @@
+<% content_for :javascript do %>
+	$("tr:even").addClass("even");
+<% end %>
+
 <% if @products.empty? %>
 	
 	<div class="block">
 		<div class="block-head">
-			<h2>Listing products</h2>
+			<h2>Listar produkter för <%= @category.name %></h2>
 		</div>
 		<div class="block-content centered">
 			<p><%= link_to 'Lägg till produkt', new_admin_category_product_path, :class => "button" %></p>
@@ -16,7 +20,7 @@
 	
 		<div class="block">
 			<div class="block-head">
-				<h2>Listing products</h2>
+				<h2>Listar produkter för "<%= @category.name %>"</h2>
 			</div>
 			<div class="block-content">
 				<table>

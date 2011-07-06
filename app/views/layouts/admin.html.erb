@@ -25,6 +25,11 @@
 
       <%= yield %>
     </div>
-		<%= yield(:javascript) %>
+		
+		<script type="text/javascript">
+			$(document).ready(function(){
+				<%= yield(:javascript) %>
+			});
+		</script>
   </body>
 </html>

@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
   add_breadcrumb 'Produkter', 'categories_path'
  
  def index
-   @products = category.products.all
+   @products = category.products.order("name asc")
    @category = category
    
    set_breadcrumb_for category
