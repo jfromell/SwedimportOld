@@ -1,6 +1,5 @@
 <% key = Rails.application.config.session_options[:key] %>
 <% content_for :javascript do %>
-	<script type="text/javascript">
 		var upload_params = {
 			'<%= key %>' : '<%= cookies[key] %>',
 			'<%= request_forgery_protection_token %>' : '<%= form_authenticity_token %>',
@@ -36,7 +35,6 @@
 				$('#photos').append(response);
 			}
 		});
-	</script>
 <% end %>
 
 <div id="photos_wrapper">
