@@ -13,14 +13,9 @@
 	</div>
 </div>
 
-<div id="pageContent" class="tabbed fr">
-	<ul>
-	    <li><a href="#swedimport">Swedimport</a></li>
-	    <li><a href="#certifikat">Certifikat</a></li>
-	    <li><a href="#material">Material</a></li>
-	</ul>
-	
-	<div id="swedimport" class="tab_content">
+<div id="pageContent" class="fl">
+	<div class="about fl">
+		<h1>Swedimport i Lindesberg AB</h1>
 		<p>
 			Swedimport har i 35 års tid arbetat med plastdetaljer för industrin. Därför har vi ett av Sveriges ledande sortiment på över 5.000 produkter. Detta tillsammans med vår kunskap leder till att vi löser de flesta av våra kunders önskemål och problem. Service är vår styrka och därför kan ni räkna med att få de produkter ni behöver.
 		</p>
@@ -29,24 +24,17 @@
 			Våra kunder finns utspridda över hela landet men vi levererar även till våra nordiska grannländer.
 		</p>
 	</div>
-	<div id="certifikat" class="tab_content">
-		<div class="half fl">
-			<h3>Vad är ISO 14001?</h3> 
-			<p>ISO 14001 är del av en serie standarder som kan tillämpas i vilken organisation som helst, var som helst, med hänsyn till miljöledning. Baserad på Plan-Do-Check-Act cykeln, specificerar ISO 14001 de viktigaste kraven för att identifiera, kontrollera, systematisera och bevaka miljöpåverkan inom organisationer, samt hur ledningen och förbättringen av systemet sköts.</p>
-			<%= image_tag 'frontend/certifikat/ISO_14001.png' %>
-		</div>
-		<div class="half last fl">
-			<h3>Vad är ISO 9001?</h3>
-			<p>ISO 9001 är en internationell standard som rör kvalitetsledning och gäller för alla organisationer från alla typer av branscher och verksamheter. Den är baserad på åtta kvalitetsledningsprinciper och leder därigenom er verksamhet mot: kundfokus, medarbetarnas engagemang, ständig förbättring och ömsesidigt fördelaktiga relationer till leverantörer.</p>
-			<%= image_tag 'frontend/certifikat/ISO_9001.png' %>
-		</div>
-		<div class="cl"></div>
+	<div class="cert half fl">
+		<h3>Vad är ISO 14001?</h3> 
+		<p>ISO 14001 är del av en serie standarder som kan tillämpas i vilken organisation som helst, var som helst, med hänsyn till miljöledning. Baserad på Plan-Do-Check-Act cykeln, specificerar ISO 14001 de viktigaste kraven för att identifiera, kontrollera, systematisera och bevaka miljöpåverkan inom organisationer, samt hur ledningen och förbättringen av systemet sköts.</p>
+		<%= image_tag 'frontend/certifikat/ISO_14001.png' %>
 	</div>
-	<div id="material" class="tab_content">
+	<div class="cert half last fl">
+		<h3>Vad är ISO 9001?</h3>
+		<p>ISO 9001 är en internationell standard som rör kvalitetsledning och gäller för alla organisationer från alla typer av branscher och verksamheter. Den är baserad på åtta kvalitetsledningsprinciper och leder därigenom er verksamhet mot: kundfokus, medarbetarnas engagemang, ständig förbättring och ömsesidigt fördelaktiga relationer till leverantörer.</p>
+		<%= image_tag 'frontend/certifikat/ISO_9001.png' %>
+	</div>
+	<div class="material fl">
 		Material tab
 	</div>
 </div>
-
-<script type="text/javascript">
-	$('div.tabbed ul').idTabs();
-</script>

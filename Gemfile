@@ -6,6 +6,10 @@ gem 'rails', '3.0.6'
 # gem 'sqlite3'
 gem 'ruby-pg'
 
+gem 'heroku'
+
+gem 'newrelic_rpm'
+
 # User authentication
 gem 'devise'
 

@@ -500,34 +500,19 @@ div#map_container{
 
 /************************ ABOUT STYLES ************************/
 
-div.tabbed ul li{
-	float:left;
-	list-style: none;
+div.about{
+	margin-bottom:60px;
+}	
+div.cert.half{
+	width: 47%;
+	margin-right:3%;
 }
-div.tabbed ul li a{
-	background: #e5e9ed;
-	border: 1px solid #E1E5E9;
-	padding: 6px 10px;
-	margin: 1px 1px 0px 0px;
-	display: block;
-}
-div.tabbed ul li a.selected{
-	background: #f5f7f8;
-	border-bottom: 1px solid #f5f7f8;
-}
-div.tab_content{
-	background: #f5f7f8;
-	border: 1px solid #E1E5E9;
-	clear: left;
-	padding: 10px;
-}
-	div.tab_content .half{
-		width:47%;
-		margin-right:3%;
-	}
-	div.tab_content .last{
+	div.cert.half.last{
 		margin-right:0;
 	}
+div.material{
+	margin-top:50px;
+}
 
 /************************ SEARCH STYLES ************************/
 ul#search_results{
