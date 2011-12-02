@@ -6,6 +6,7 @@ set :real_revision, lambda{ source.query_revision(revision) { |cmd| capture(cmd)
 
 ssh_options[:paranoid] = false
 default_run_options[:pty] = true
+ssh_options[:keys] = [File.join(ENV["HOME"], ".ssh", "id_rsa")]
 
 set :scm, :git
 set :git_shallow_clone, 1

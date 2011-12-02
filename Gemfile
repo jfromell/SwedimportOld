@@ -5,7 +5,7 @@ gem 'rails', '3.0.6'
 # Database com
 # gem 'sqlite3'
 # gem 'ruby-pg'
-gem 'mysql'
+gem 'mysql2'
 
 # User authentication
 gem 'devise'
