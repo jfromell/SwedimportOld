@@ -1,11 +1,17 @@
 <% @children.each do |category| %>
 	<div class="categoryBox fl">
 		<div class="img">
-			<% category.photos.each do |photo| %>
+			<% if category.is_root? %>
 				<% if category.has_children? %>
-					<%= link_to image_tag(photo.image_url(:thumb)), category %>
+					<%= link_to image_tag(category.photos.first.image_url(:large)), category unless category.photos.first.nil? %>
 				<% else %>
-					<%= link_to image_tag(photo.image_url(:thumb)), category_products_path(category) %>
+					<%= link_to image_tag(category.photos.first.image_url(:large)), category_products_path(category) unless category.photos.first.nil? %>
+				<% end %>
+			<% else %>
+				<% if category.has_children? %>
+					<%= link_to image_tag(category.photos.first.image_url(:medium)), category unless category.photos.first.nil? %>
+				<% else %>
+					<%= link_to image_tag(category.photos.first.image_url(:medium)), category_products_path(category) unless category.photos.first.nil? %>
 				<% end %>
 			<% end %>
 		</div>

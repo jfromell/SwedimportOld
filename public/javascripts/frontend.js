@@ -9,15 +9,12 @@ $(document).ready(function(){
 		visible: 1
 	});
 	
-	$(".categoryBox .img").cycle({
-		fx: 'fade'
-	});
-	
 	centerSideBarImage();
 	
 	$("#serviceListContainer .centerContainer .oneThird").last().addClass('last');
 	
 	$("table tbody tr:odd").addClass('odd');
+	
 });
 
 function centerSideBarImage(){
@@ -26,3 +23,28 @@ function centerSideBarImage(){
 	
 	$(".sidebarGeneral .img img").css('padding', imagePadding);
 }
+
+$.tablesorter.addParser({
+  
+  id: 'strippedChars',
+  is:function(s){
+    return false;
+  },
+  
+  format: function(s){
+    
+    string = s.toString().replace(/[a-zA-Z]+/, '');
+    
+    while(string.length < 3){
+      
+      string = '0' + string;
+      
+    }
+    
+    return string;
+    
+  },
+  
+  type: 'numeric'
+  
+});

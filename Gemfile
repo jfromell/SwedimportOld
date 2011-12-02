@@ -4,11 +4,8 @@ gem 'rails', '3.0.6'
 
 # Database com
 # gem 'sqlite3'
-gem 'ruby-pg'
-
-gem 'heroku'
-
-gem 'newrelic_rpm'
+# gem 'ruby-pg'
+gem 'mysql'
 
 # User authentication
 gem 'devise'
@@ -34,10 +31,7 @@ gem 'jquery-rails'
 gem 'crumble', :require => 'breadcrumb'
 
 # Sphinx full-text search
-gem 'thinking-sphinx'
-
-# Debugger
-gem 'ruby-debug'
+# gem 'thinking-sphinx'
 
 # Exporting/Restoring database
 gem 'yaml_db'

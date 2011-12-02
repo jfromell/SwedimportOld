@@ -31,7 +31,7 @@ Swedimport2::Application.routes.draw do
   resources :contacts
   
   match 'about' => 'home#about', :as => :about
-  match 'contact' => 'contacts#new', :as => :contact
+  match 'contact' => 'home#contact', :as => :contact
   match 'index' => 'home#index', :as => :index
   match 'search' => 'home#search', :as => :search
 

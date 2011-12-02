@@ -3,7 +3,9 @@
 		<%= f.input :name, :required => true, :label => "Benämning" %>
 		<%= f.input :description, :required => true, :label => "Beskrivning" %>
 		<%= f.input :heading, :required => false, :hint => "Separera varje fält med ett komma. Ex. Benänming,Utv. mått etc.", :label => "Tabell huvud" %>
-		<%= f.input :parent_id, :collection => @categories, :required => true, :label => "Tillhör", :hint => "Lämna blank ifall kategorin inte tillhör en annan kategori", :as => :select %>	
+		<%= f.input :sortList, :required => false, :hint => "Skrivs i formatet '[kolumn, riktning]' där kolumn nr. börjar från 0 och där 0 är stigande och 1 är fallande.", :label => "Sortering" %>
+		<%= f.input :parent_id, :collection => @categories, :required => true, :label => "Tillhör", :hint => "Lämna blank ifall kategorin inte tillhör en annan kategori", :as => :select %>
+		<%= f.input :published, :required => true, :label => "Publicerad", :checked_value => "yes", :unchecked_value => "no" %>	
 	<% end %>
 	
 	<%= render :partial => 'photos', :locals => { :f => f } %>

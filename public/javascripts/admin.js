@@ -6,7 +6,7 @@ $(document).ready(function(){
 	});
 	
 	// Set button to disabled if no checkbox is checked
-	$(":checkbox").click(countChecked);
+	//$(":checkbox").click(countChecked);
 	$(".bulk_delete").attr('disabled', true);
 	
 	// Toggle more pictures

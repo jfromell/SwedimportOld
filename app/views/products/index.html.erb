@@ -17,7 +17,7 @@
 		<div class="sidebarGeneral">
 			<div class="img">
 				<% @category.photos.each do |photo| %>
-					<%= image_tag(photo.image_url(:thumb)) %>
+					<%= image_tag(photo.image_url(:xlarge)) %>
 				<% end %>
 			</div>
 			<ul id="pagerNav"></ul>
@@ -50,3 +50,24 @@
 		</tbody>
 	</table>
 </div>
+
+<% content_for :javascripts do %>
+	$("table").tablesorter({
+	  headers: {
+	    1: {
+	      sorter: 'strippedChars'
+	    },
+	    2: {
+	      sorter: 'strippedChars'
+	    },
+	    3: {
+	      sorter: 'strippedChars'
+	    },
+	    4: {
+	      sorter: 'strippedChars'
+	    }
+	  },
+	  sortList: [<%= @category.sortList %>],
+	  widgets: ['zebra']
+	});
+<% end %>

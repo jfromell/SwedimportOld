@@ -1,20 +1,23 @@
 development:
-  adapter: postgresql
+  adapter: mysql
   encoding: utf8
   database: swedimport_development
-  username: postgres
-  template: template0
+  username: root
+  password: root
+  host: localhost
 	
 test:
-  adapter: postgresql
+  adapter: mysql
   encoding: utf8
   database: swedimport_test
-  username: postgres
-  template: template0
+  username: root
+  password: root
+  host: localhost
 
 production:
-  adapter: postgresql
+  adapter: mysql
   encoding: utf8
   database: swedimport_production
-  username: postgres
-  template: template0
+  username: root
+  password: root
+  host: localhost

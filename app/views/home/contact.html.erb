@@ -1,0 +1,110 @@
+<% content_for :title, 'Kontakta oss' %>
+
+<div class="sidebarContainer fl">
+	<div class="sidebarItem">
+		<div class="sidebarHeader">
+			<h3>Kontakt information</h3>
+		</div>
+		<ul class="basicList">
+		    <li>
+		    	<p>Swedimport AB</p>
+					<p>Bronäsvägen 6</p>
+					<p>711 34  Lindesberg</p>
+		    </li>
+		    <li>
+		    	<p>(+46) 0581-13500
+		    </li>
+		    <li>
+					<p>
+		    		<a href="mailto:info@swedimport.se">info@swedimport.se</a>
+					</p>
+		    </li>
+		</ul>
+	</div>
+</div>
+
+<div id="pageContent" class="fr">
+	<div id="map_controls">
+		<input type="text" id="directions_input" placeholder="Hitta hit från..." />
+		<button type="submit" id="get_directions">Hitta</button>
+	</div>
+	<div id="map">
+		
+	</div>
+	<div id="directions"></div>
+	
+	<div class="sepContainer"></div>
+	
+	<div id="result"></div>
+	
+	<%= form_for @contact_message, :as => :contact_message, :url => { :controller => :contacts, :action => :create }, :remote => true do |f| %>
+		<p class="oneHalf">
+			<%= f.label "Namn" %>
+			<%= f.text_field :name %>
+		</p>
+
+		<p class="oneHalf">
+			<%= f.label "Email" %>
+			<%= f.text_field :email %>
+		</p>
+
+		<p>
+			<%= f.label "Meddelande" %>
+		</p>
+		<p>
+			<%= f.text_area :body %>
+		</p>
+
+		<p>
+			<%= f.submit "Skicka" %>
+		</p>
+	<% end %>
+</div>
+
+<% content_for :javascripts do %>
+	$('#map').gmap3(
+		{ action: 'addMarker',
+			address: "Bronäsvägen 6, Lindesberg, Sverige",
+			map: {
+				center: [59.606025,15.186961],
+				zoom: 14
+			},
+			marker: {
+				options: {
+					draggable: false
+				}
+			},
+			infowindow:{
+				options:{
+					content: 'Swedimport i Lindesberg AB<br />Bronäsvägen 6<br />711 34 Lindesberg'
+				}
+			}
+		}
+	);
+	
+	$('#get_directions').click(function(e){
+		
+		$('#directions').empty();
+		
+		$('#map').gmap3(
+			{ action: 'getRoute',
+				options: {
+					origin: $('#directions_input').val(),
+					destination: 'Bronäsvägen 6, Lindesberg, Sverige',
+					travelMode: google.maps.DirectionsTravelMode.DRIVING
+				},
+				callback: function(results){
+					$(this).gmap3({
+						action: 'addDirectionsRenderer',
+						panelId: 'directions',
+						options: {
+							preserveViewport: false,
+							draggable: false,
+							directions: results
+						}
+					});
+				}
+			}
+		);
+	});
+<% end %>

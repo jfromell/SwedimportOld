@@ -3,7 +3,7 @@ class Contact
   include ActiveModel::Validations
   
   validates :email, :sender_name, :content, :presence => true
-  attr_accessor :id, :email, :sender_name, :content
+  attr_accessor :id, :email, :name, :body
   
   def initialize(attributes = {})
     attributes.each do |key, value|
@@ -21,7 +21,7 @@ class Contact
   
   def save
     if self.valid?
-      Notifier.contact_notification(self).deliver
+      Notifier.contact_us(self).deliver
       return true
     end
     return false

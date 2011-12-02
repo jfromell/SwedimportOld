@@ -350,14 +350,14 @@ div.categoryBox{
 	margin-bottom: 20px;
 }
 	div.categoryBox .img {
-		height: 125px;
+		height: 100px;
 		padding-bottom: 10px;
 		position:relative;
 	}
 		div.categoryBox .img a{
 			position:absolute;
 			bottom:0;
-			left:12px;
+			left:22px;
 		}
 	div.categoryBox .description{
 		height: 25px;
@@ -442,13 +442,13 @@ ul.basicList li{
 div.sidebarGeneral{
 	margin: 20px;
 }
-form#contactForm{
+form#contact_message_new{
 	overflow: hidden;
 }
-form#contactForm p{
+form#contact_message_new p{
 	margin-top: 0;
 }
-form#contactForm input[type="text"]{
+form#contact_message_new input[type="text"]{
 	background: url(../images/frontend/lightInputBG.png) 0 0 repeat-x;
 	height: 30px;
 	
@@ -460,10 +460,10 @@ form#contactForm input[type="text"]{
 	width: 260px;
 	padding: 0 10px;
 }
-	form#contactForm input[type="text"]:hover{
+	form#contact_message_new input[type="text"]:hover{
 		border: 1px solid #B8BABD;
 	}
-form#contactForm textarea{
+form#contact_message_new textarea{
 	background: url(../images/frontend/lightTextareaBG.png) 0 0 repeat-x;
 	height: 179px;
 	width: 601px;
@@ -476,15 +476,15 @@ form#contactForm textarea{
 	padding: 10px 10px 0 10px;
 	font-family: Arial, Tahoma, sans-serif;
 }
-	form#contactForm textarea:hover{
+	form#contact_message_new textarea:hover{
 		border: 1px solid #B8BABD;
 	}
-form#contactForm label{
+form#contact_message_new label{
 	text-transform: uppercase;
 	display: block;
 	margin-bottom: 10px;
 }
-form#contactForm p.additionalOptions a{
+form#contact_message_new p.additionalOptions a{
 	color: #367ABA;
 	line-height: 41px;
 	height: 41px;
@@ -494,8 +494,29 @@ p.oneHalf{
 	margin-right: 3%;
 	float: left;
 }
-div#map_container{
-	margin: 5px !important;
+div#map{
+	width:100%;
+	height:350px;
+}
+div#map_controls{
+  margin-bottom:10px;
+}
+div#map_controls #directions_input{
+  background:#fff;
+  border:1px solid #ccc;
+  height:22px;
+  padding:4px 0 4px 6px;
+  color:#000;
+  font-size:138%;
+  vertical-align:top;
+}
+div#map_controls #get_directions{
+  height:32px;
+  padding:0 10px 0 10px;
+  cursor:pointer;
+  background: -moz-linear-gradient(top, #4D90FE, #4787ED);
+  border:1px solid #3079ED;
+  color:#FFF;
 }
 
 /************************ ABOUT STYLES ************************/
@@ -512,6 +533,7 @@ div.cert.half{
 	}
 div.material{
 	margin-top:50px;
+	width:auto;
 }
 
 /************************ SEARCH STYLES ************************/

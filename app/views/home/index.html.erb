@@ -9,24 +9,21 @@
 				<ul>
 				    <li>
 				        <%= image_tag('frontend/slider/sliderImg1.png', :alt => 'IMG01', :class => 'slideImg fl') %>
-				        <h1>Kolla här!</h1>
-				        <p class="sliderParagraph">Häftiga grejer som kanske passar just dig!</p>
+				        <h1>Vibrationsdämpare</h1>
+				        <p class="sliderParagraph">I ett flertal olika modeller och dimensioner. Ring och beställ din broschyr på 0581-13500</p>
 								<div class="blankSeparator"></div>
-				        <%= link_to 'Klicka här', categories_path, :class => 'darkButton fl' %>
 				    </li>
 				    <li>
-				        <%= image_tag('frontend/slider/sliderImg1.png', :alt => 'IMG01', :class => 'slideImg fl') %>
-				        <h1>Kolla igen!</h1>
-				        <p class="sliderParagraph">Mer häftiga grejer som kanske passar just dig!</p>
+				        <%= image_tag('frontend/slider/sliderImg2.png', :alt => 'IMG01', :class => 'slideImg fl') %>
+				        <h1>S-Kroken</h1>
+				        <p class="sliderParagraph">Lika smidig att sätta dit som att ta av. Ring och beställ din broschyr på 0581-13500</p>
 								<div class="blankSeparator"></div>
-				        <%= link_to 'Klicka här', categories_path, :class => 'darkButton fl' %>
 				    </li>
 				    <li>
-				        <%= image_tag('frontend/slider/sliderImg1.png', :alt => 'IMG01', :class => 'slideImg fl') %>
-				        <h1>Och en gång till</h1>
-				        <p class="sliderParagraph">Ännu mer häftiga grejer som kanske passar just dig!</p>
+				        <%= image_tag('frontend/slider/sliderImg3.png', :alt => 'IMG01', :class => 'slideImg fl') %>
+				        <h1>Hörnskydd</h1>
+				        <p class="sliderParagraph">Ett flertal olika modeller för att skydda din produkt vid transport. Ring och beställ din broschyr på 0581-13500</p>
 								<div class="blankSeparator"></div>
-				        <%= link_to 'Klicka här', categories_path, :class => 'darkButton fl' %>
 				    </li>
 				</ul>
 			</div>
@@ -42,7 +39,7 @@
 		<% @featured.each do |feature| %>
 			<div class="oneThird">
 				<% unless feature.photos.first.nil? %>
-					<%= image_tag(feature.photos.first.image_url(:thumb), :class => "fl") %>
+					<%= image_tag(feature.photos.first.image_url(:large), :class => "fl") %>
 				<% end %>
 				<h3 class="sectionTitle">
 						<% if feature.has_children? %>
@@ -81,5 +78,6 @@
 		<p>
 			Swedimport finns i Lindesberg, 40 km norr om Örebro. Örebro är en terminalort vilket borgar för säkra leveranser. Våra kunder finns utspridda över hela landet men vi levererar även till våra nordiska grannländer. 
 		</p>
+		<%= image_tag 'frontend/huset_small.jpg', :alt => 'Huset' %>
 	</div>
 </div>

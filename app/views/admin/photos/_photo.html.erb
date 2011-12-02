@@ -1,4 +1,4 @@
 <div id="photo_<%= photo.id %>" class="photo">
-	<%= image_tag photo.image_url(:thumb) if photo.image? %>
+	<%= image_tag photo.image_url(:medium) if photo.image? %>
 	<%= link_to(image_tag('icons/button-subtract.png'), admin_category_photo_path(@category, photo), :method => :delete, :confirm => "Är du säker?", :remote => :true, :class => 'delete_button') %>
 </div>

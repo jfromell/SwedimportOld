@@ -1,10 +1,9 @@
 class Notifier < ActionMailer::Base
   
-  def contact_notification(sender)
-    @sender = sender
-    mail(:to      => 'info@swedimport.se',
-         :from    => sender.email,
-         :subject => "Meddelande från #{sender.sender_name} genom Swedimport.se"
-        )
+  def contact_us(contact_message)
+    @contact_message = contact_message
+    
+    mail(:to => info@swedimport.se, :from => contact_message.email, :subject => contact_message.subject)
   end
+  
 end

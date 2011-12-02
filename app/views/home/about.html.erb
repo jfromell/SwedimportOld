@@ -1,19 +1,6 @@
 <% content_for :title, 'Om Swedimport' %>
 
-<div class="sidebarContainer fl">
-	<div class="sidebarItem">
-		<div class="sidebarHeader">
-			<h3>Länkar</h3>
-		</div>
-		<ul class="arrowlist">
-			<li><a href="http://skiffy.com/docs/menufr.cfm?taal=se&ID=xyxz5634753A7&pagina=start.cfm">Skiffy</a></li>
-			<li><a href="#">Nånting annat</a></li>
-			<li><a href="#">Nånting annat</a></li>
-		</ul>
-	</div>
-</div>
-
-<div id="pageContent" class="fl">
+<div id="pageContent" class="fl" style="margin:0 auto;">
 	<div class="about fl">
 		<h1>Swedimport i Lindesberg AB</h1>
 		<p>
@@ -23,6 +10,7 @@
 			Swedimport finns i Lindesberg, 40 km norr om Örebro. Örebro är en terminalort vilket borgar för säkra leveranser. 
 			Våra kunder finns utspridda över hela landet men vi levererar även till våra nordiska grannländer.
 		</p>
+		<%= image_tag 'frontend/huset.jpg', :alt => 'Huset' %>
 	</div>
 	<div class="cert half fl">
 		<h3>Vad är ISO 14001?</h3> 
@@ -35,6 +23,167 @@
 		<%= image_tag 'frontend/certifikat/ISO_9001.png' %>
 	</div>
 	<div class="material fl">
-		Material tab
+		<h3>Materialförteckning</h3>
+		
+		<table>
+			<thead>
+				<tr>
+					<th>Material</th>
+					<th>Bensin</th>
+					<th>Benzen</th>
+					<th>Mineralolja</th>
+					<th>Vegetabilisk olja</th>
+					<th>Svaga alkalier</th>
+					<th>Starka alkalier</th>
+					<th>Svaga syror</th>
+					<th>Starka syror</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Nylon-6 (PA6)</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="notSoGood">B</td>
+					<td class="notSoGood">B</td>
+					<td class="bad">C</td>
+				</tr>
+				<tr>
+					<td>Nylon-66 (PA66)</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="notSoGood">B</td>
+					<td class="notSoGood">B</td>
+					<td class="bad">C</td>
+				</tr>
+				<tr>
+					<td>LD-Polyeten (LDPE)</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="notSoGood">B</td>
+				</tr>
+				<tr>
+					<td>HD-Polyeten (HDPE)</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="notSoGood">B</td>
+				</tr>
+				<tr>
+					<td>Polyoxymetylen (POM)</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="notSoGood">B</td>
+					<td class="notSoGood">B</td>
+					<td class="bad">C</td>
+				</tr>
+				<tr>
+					<td>Polyvinylchlorid (PVC)</td>
+					<td class="good">A</td>
+					<td class="bad">C</td>
+					<td class="notSoGood">B</td>
+					<td class="notSoGood">B</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="notSoGood">B</td>
+				</tr>
+				<tr>
+					<td>Termoplastisk polyester (TPE)</td>
+					<td class="notSoGood">B</td>
+					<td class="notSoGood">B</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="bad">C</td>
+					<td class="bad">C</td>
+					<td class="notSoGood">B</td>
+					<td class="notSoGood">B</td>
+				</tr>
+				<tr>
+					<td>Polypropylen (PP)</td>
+					<td class="notSoGood">B</td>
+					<td class="bad">C</td>
+					<td class="notSoGood">B</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="bad">C</td>
+				</tr>
+				<tr>
+					<td>Polystyren (PS)</td>
+					<td class="notSoGood">B</td>
+					<td class="bad">C</td>
+					<td class="notSoGood">B</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+				</tr>
+				<tr>
+					<td>Bakelit (BA)</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="notSoGood">B</td>
+					<td class="good">A</td>
+					<td class="notSoGood">B</td>
+				</tr>
+				<tr>
+					<td>Polystyrol</td>
+					<td class="notSoGood">B</td>
+					<td class="bad">C</td>
+					<td class="notSoGood">B</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+				</tr>
+				<tr>
+					<td>ABS</td>
+					<td class="bad">C</td>
+					<td class="bad">C</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="bad">C</td>
+				</tr>
+				<tr>
+					<td>Polyuretan (PUR)</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="good">A</td>
+					<td class="bad">C</td>
+					<td class="notSoGood">B</td>
+					<td class="bad">C</td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 </div>

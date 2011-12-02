@@ -1,0 +1,20 @@
+development:
+  adapter: postgresql
+  encoding: utf8
+  database: swedimport_development
+  username: postgres
+  template: template0
+	
+test:
+  adapter: postgresql
+  encoding: utf8
+  database: swedimport_test
+  username: postgres
+  template: template0
+
+production:
+  adapter: postgresql
+  encoding: utf8
+  database: swedimport_production
+  username: postgres
+  template: template0

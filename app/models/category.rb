@@ -13,6 +13,8 @@ class Category < ActiveRecord::Base
   # Pretty dropdowns
   before_save :cache_ancestry
   
+  scope :published, where(:published => 'yes')
+  
   def cache_ancestry
     self.names_depth_cache = path.map(&:name).join('/')
   end
