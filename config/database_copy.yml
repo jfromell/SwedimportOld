@@ -1,19 +1,19 @@
 development:
-  adapter: postgresql
+  adapter: mysql2
   encoding: utf8
   database: swedimport_development
   username: postgres
   template: template0
 	
 test:
-  adapter: postgresql
+  adapter: mysql2
   encoding: utf8
   database: swedimport_test
   username: postgres
   template: template0
 
 production:
-  adapter: postgresql
+  adapter: mysql
   encoding: utf8
   database: swedimport_production
   username: postgres

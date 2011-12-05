@@ -3,12 +3,12 @@ class CategoriesController < ApplicationController
   add_breadcrumb 'Produkter', 'categories_path'
  
  def index
-   @children = Category.roots.published
+   @children = Category.roots
  end
  
  def show
    @category = Category.find(params[:id])
-   @children = Category.children_of(params[:id]).published
+   @children = Category.children_of(params[:id])
    
    set_breadcrumb_for @category
  end

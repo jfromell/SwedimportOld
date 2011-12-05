@@ -1,11 +1,11 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.6'
+gem 'rails'
 
 # Database com
 # gem 'sqlite3'
 # gem 'ruby-pg'
-gem 'mysql2'
+gem 'mysql2', '0.2.7'
 
 # User authentication
 gem 'devise'
@@ -31,7 +31,7 @@ gem 'jquery-rails'
 gem 'crumble', :require => 'breadcrumb'
 
 # Sphinx full-text search
-# gem 'thinking-sphinx'
+gem 'thinking-sphinx'
 
 # Exporting/Restoring database
 gem 'yaml_db'

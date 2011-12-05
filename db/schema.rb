@@ -27,10 +27,8 @@ ActiveRecord::Schema.define(:version => 20110908052209) do
     t.datetime "locked_at"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "authentication_token"
   end
 
-  add_index "admin_admins", ["authentication_token"], :name => "index_admin_admins_on_authentication_token", :unique => true
   add_index "admin_admins", ["email"], :name => "index_admin_admins_on_email", :unique => true
   add_index "admin_admins", ["reset_password_token"], :name => "index_admin_admins_on_reset_password_token", :unique => true
   add_index "admin_admins", ["unlock_token"], :name => "index_admin_admins_on_unlock_token", :unique => true
@@ -44,8 +42,8 @@ ActiveRecord::Schema.define(:version => 20110908052209) do
     t.string   "ancestry"
     t.string   "names_depth_cache"
     t.integer  "ancestry_depth",    :default => 0
-    t.string   "sortList",          :default => "[0,0]"
     t.boolean  "published",         :default => false
+    t.string   "sortList",          :default => "[0,0]"
   end
 
   add_index "categories", ["ancestry"], :name => "index_categories_on_ancestry"
