@@ -3,7 +3,6 @@ development:
   encoding: utf8
   database: swedimport_development
   username: root
-  password: root
   host: localhost
 	
 test:

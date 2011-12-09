@@ -60,7 +60,7 @@ GEM
     mini_magick (3.3)
       subexec (~> 0.1.0)
     multi_json (1.0.4)
-    mysql2 (0.2.7)
+    mysql2 (0.3.11)
     nifty-generators (0.4.6)
     orm_adapter (0.0.5)
     polyglot (0.3.3)
@@ -123,7 +123,7 @@ DEPENDENCIES
   formtastic
   jquery-rails
   mini_magick
-  mysql2 (= 0.2.7)
+  mysql2
   nifty-generators
   rails
   thinking-sphinx
