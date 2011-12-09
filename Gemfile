@@ -10,6 +10,8 @@ gem 'mysql2'
 # User authentication
 gem 'devise'
 
+gem 'capistrano'
+
 # Layout generation
 gem 'nifty-generators', :group => :development
 
