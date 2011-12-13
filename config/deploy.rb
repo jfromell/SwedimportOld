@@ -20,6 +20,9 @@ role :app,                "31.192.226.123"
 role :web,                "31.192.226.123"
 role :db,                 "31.192.226.123", :primary => true
 
+ssh_options[:paranoid]    = false
+default_run_options[:pty] =true
+
 namespace :deploy do
   task :start do
     sudo "/etc/init.d/unicorn start"

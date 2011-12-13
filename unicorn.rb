@@ -8,6 +8,6 @@ timeout 30
 user 'deployer', 'staff'
 
 shared_path = "/home/deployer/swedimport/shared"
-pid = "#{shared_path}/log/unicorn.pid"
+pid "#{shared_path}/pids/unicorn.pid"
 stderr_path "#{shared_path}/log/unicorn.stderr.log"
 stdout_path "#{shared_path}/log/unicorn.stdout.log"
