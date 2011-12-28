@@ -3,7 +3,7 @@ class Admin::CategoriesController < Admin::BaseController
   before_filter :authenticate_admin!
   
   def index
-    @categories = Category.all.arrange(:order => :name)
+    @categories = Category.arrange(:order => :name)
   end
   
   def show
