@@ -3,7 +3,7 @@
   <head>
     <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
     <%= stylesheet_link_tag "reset", "frontend" %>
-    <%= javascript_include_tag :defaults, "jquery.idTabs.min", "jquery.cycle.all.min", "jquery.jcarousel.min", "tableSorter.min", "frontend", "http://maps.google.com/maps/api/js?sensor=false", "gmap3.min" %>
+    <%= javascript_include_tag :defaults, "jquery.idTabs.min", "jquery.cycle.all.min", "jquery.jcarousel.min", "tablesorter.min", "frontend", "http://maps.google.com/maps/api/js?sensor=false", "gmap3.min" %>
 		<%= yield(:head) %>
     <%= csrf_meta_tag %>
   </head>
