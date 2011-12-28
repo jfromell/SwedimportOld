@@ -3,7 +3,7 @@ class Admin::CategoriesController < Admin::BaseController
   before_filter :authenticate_admin!
   
   def index
-    @categories = Category.scoped
+    @categories = Category.all
   end
   
   def show
