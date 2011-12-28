@@ -16,7 +16,7 @@
 
 <% else %>
 
-	<% form_for :product, :url => destroy_multiple_admin_category_products_path do %>
+	<% form_for :product, :url => destroy_multiple_admin_category_products_path do |f| %>
 	
 		<div class="block">
 			<div class="block-head">
@@ -40,7 +40,7 @@
 				
 				<div class="form_buttons">
 					<%= link_to 'Lägg till produkt', new_admin_category_product_path, :class => "button" %>
-					<%= submit_tag 'Ta bort markerade', :class => "bulk_delete" %>
+					<%= f.submit_tag 'Ta bort markerade', :class => "bulk_delete" %>
 				</div>
 			</div>
 			<p><%= link_to "Tillbaka till kategorier", admin_categories_path %></p>
