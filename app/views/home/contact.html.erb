@@ -37,7 +37,7 @@
 	
 	<div id="result"></div>
 	
-	<%= form_for @contact_message, :as => :contact_message, :url => { :controller => :contacts, :action => :create }, :remote => true do |f| %>
+	<%= form_for @message, :url => contact_path do |f| %>
 		<p class="oneHalf">
 			<%= f.label "Namn" %>
 			<%= f.text_field :name %>

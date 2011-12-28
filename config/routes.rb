@@ -34,6 +34,8 @@ Swedimport2::Application.routes.draw do
   match 'contact' => 'home#contact', :as => :contact
   match 'index' => 'home#index', :as => :index
   match 'search' => 'home#search', :as => :search
+  
+  match 'contact' => 'contact#create', :as => 'contact', :via => :post
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -13,6 +13,16 @@ Swedimport2::Application.configure do
   config.action_dispatch.x_sendfile_header = "X-Sendfile"
   
   config.action_mailer.default_url_options = { :host => 'http://31.192.226.123' }
+  
+  config.action_mailer.smtp_settings = {
+    :address              => "smtp.gmail.com",
+    :port                 => 587,
+    :domain               => "http://31.192.226.123/",
+    :user_name            => "feedtheplague@gmail.com",
+    :password             => "7q1y6646",
+    :authentication       => :plain,
+    :enable_starttls_atuo => true
+  }
 
   # For nginx:
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'
