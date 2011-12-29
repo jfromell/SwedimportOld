@@ -13,7 +13,7 @@ class ContactController < ApplicationController
       NotificationsMailer.new_message(@message).deliver
       redirect_to(contact_path, :notice => "Meddelandet skickades!")
     else
-      flash.now.alert = "Var god fyll i alla fält"
+      flash.now[:alert] = "Var god fyll i alla fält"
       render :new
     end
   end
