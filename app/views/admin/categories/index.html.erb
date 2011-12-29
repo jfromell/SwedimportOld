@@ -1,6 +1,5 @@
 <% title "Sweadmin | Kategorier" %>
 
-<% form_for :category, :url => { :action => :destroy_multiple } do |f| %>
 	<div class="block">
 		<div class="block-head">
 			<h2>Kategorier</h2>
@@ -8,7 +7,6 @@
 		<div class="block-content">
 			<table id="doTree">
 				<thead>
-					<th class="checkbox"></th>
 					<th>Benämning</th>
 					<th>Beskrivning</th>
 					<th>Åtgärder</th>
@@ -19,7 +17,6 @@
 			</table>
 			<div class="form_buttons">
 				<%= link_to "Ny kategori", new_admin_category_path, :class => "button" %>
-				<%= f.submit "Ta bort valda", :class => "bulk_delete" %>
 			</div>
 		</div>
 	</div>

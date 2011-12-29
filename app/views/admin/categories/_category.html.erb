@@ -3,7 +3,6 @@
 <% else %>
 	<tr id="node-<%= category.id %>" class="child-of-node-<%= category.parent_id %>">
 <% end %>
-	<td class ="checkbox"><%= check_box_tag "category_ids[]", category.id %></td>
 	<td><%= link_to category.name, admin_category_products_path(category) %></td>
 	<td><%= category.description %></td>
 	<td class="actions">

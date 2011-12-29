@@ -1,4 +1,4 @@
-<%= semantic_form_for [:admin, @category], :html => { :multipart => true } do |f| %>
+<%= semantic_form_for @category :html => { :multipart => true } do |f| %>
 	<% f.inputs do %>
 		<%= f.input :name, :required => true, :label => "Benämning" %>
 		<%= f.input :description, :required => true, :label => "Beskrivning" %>
@@ -11,7 +11,7 @@
 	<%= render :partial => 'photos', :locals => { :f => f } %>
 	
 	<% f.buttons do %>
-		<%= f.commit_button :label => 'Spara' %>
+		<%= f.submit :label => 'Spara' %>
 	<% end %>
 
 <% end %>
