@@ -1,7 +1,7 @@
 class Message
   
   include ActiveModel::Validations
-  include ActiveModel::Conversions
+  include ActiveModel::Conversion
   
   extend ActiveModel::Naming
   
